@@ -4,7 +4,7 @@ import { z } from "zod"
 import { prisma } from "./lib/prisma"
 
 export async function appRoutes(app: FastifyInstance) {
-  app.post('/habits', async (request) => {
+  app.post('/CreateHabit', async (request) => {
     const createHabitBody = z.object({
       title: z.string(),
       weekDays: z.array(
@@ -31,7 +31,7 @@ export async function appRoutes(app: FastifyInstance) {
     })
   })
 
-  app.get('/day', async (request) => {
+  app.get('/DayHabits', async (request) => {
     const getDayParams = z.object({
       date: z.coerce.date(),
     })

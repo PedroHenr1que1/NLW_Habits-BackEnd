@@ -4,7 +4,11 @@
   "description": "",
   "main": "soma.js",
   "scripts": {
-    "dev": "tsx --watch src/server.ts"
+    "dev": "tsx watch src/server.ts",
+    "viewdb": "npx prisma studio",
+    "erd": "npx prisma generate",
+    "migrate": "npx prisma migrate dev",
+    "seed": "tsx prisma/seed.ts"
   },
   "keywords": [],
   "author": "",
